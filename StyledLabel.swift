@@ -95,7 +95,8 @@ class StyledLabel: UILabel
             iterations -= 1
         }
         
-        print("Done. Shame Apple doesn't do this for us!")
+        print("Done!")
+        //print("Shame Apple doesn't do this for us!")
         return font.fontWithSize(guess)
     }
     

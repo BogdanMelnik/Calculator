@@ -148,11 +148,11 @@ class ViewController: UIViewController{
     
     func updateButtons() {
         for button in allButtons {
-            let borderWidth:CGFloat = 2.0;
+            let borderWidth:CGFloat = 1.0;
             button.frame = CGRectInset(button.frame, -borderWidth, -borderWidth)
-            button.layer.borderColor = UIColor.whiteColor().CGColor
+            button.layer.borderColor = UIColor.blackColor().CGColor
             button.layer.borderWidth = borderWidth
-            button.setBackgroundColor(UIColor.darkGrayColor(), forState: UIControlState.Highlighted)
+            button.setBackgroundColor(UIColor.whiteColor(), forState: UIControlState.Highlighted)
         }
         divisionButton.setBackgroundColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
         multiplicationButton.setBackgroundColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
@@ -178,6 +178,10 @@ class ViewController: UIViewController{
         let inset = (button0.frame.width/2 - (button0.titleLabel?.intrinsicContentSize().width)!)/2
         //print("Inset: \(inset)")
         button0.titleEdgeInsets = UIEdgeInsetsMake(0.0, inset, 0.0, 0.0)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
     // -= Logic =-
